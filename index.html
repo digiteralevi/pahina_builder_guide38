@@ -121,6 +121,84 @@ footer{margin-top:70px;padding-top:24px;border-top:1px solid var(--line);color:v
 @media(max-width:600px){.top>div:not(.logo){display:none}.search input{min-width:0}table{display:block;overflow-x:auto}}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
 @media print{.top,nav.toc,.toTop{display:none}.layout{display:block}main{padding:0}figure img{box-shadow:none}}
+
+/* ---------- Part 6: Funnel Builder Playbook ---------- */
+:root{--gold:#E3C27A;--golddim:rgba(227,194,122,.12)}
+body.light{--gold:#9B7419;--golddim:rgba(176,132,30,.10)}
+.pbbtn{display:inline-flex;align-items:center;gap:8px;flex-shrink:0;height:36px;padding:0 14px;border-radius:999px;text-decoration:none;font:700 13px Inter,sans-serif;color:#1a1306;background:linear-gradient(135deg,#F2D68F,#D9AE55);box-shadow:var(--hi),0 8px 22px -10px rgba(227,194,122,.7);white-space:nowrap}
+.pbbtn:hover{filter:brightness(1.06)}
+.pbbtn svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:2.2}
+.pb-banner{position:relative;overflow:hidden;margin-top:26px;border-radius:18px;padding:22px 24px;border:1px solid color-mix(in srgb,var(--gold) 45%,var(--line));background:linear-gradient(120deg,var(--golddim),var(--accdim) 70%);display:grid;grid-template-columns:minmax(0,1fr) auto;gap:18px;align-items:center;max-width:860px}
+.pb-banner .k{font-size:11.5px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--gold)}
+.pb-banner h3{margin:6px 0 4px;font-size:21px}
+.pb-banner p{margin:0;color:var(--mute);font-size:15px}
+.pb-banner .acts{display:flex;flex-direction:column;gap:8px}
+.pb-banner a{display:inline-flex;justify-content:center;align-items:center;height:42px;padding:0 18px;border-radius:11px;font-weight:700;font-size:14px;text-decoration:none;white-space:nowrap}
+.pb-banner a.p{background:var(--acc);color:#fff;box-shadow:var(--hi)}
+.pb-banner a.s{border:1px solid var(--line2);color:var(--ink);background:var(--bg2)}
+.pb-chips{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:16px;font-size:13px;color:var(--faint)}
+.pb-chips button{border:1px solid var(--line);background:var(--bg2);color:var(--mute);font:600 13px Inter,sans-serif;padding:6px 12px;border-radius:999px;cursor:pointer}
+.pb-chips button:hover{border-color:var(--acc);color:var(--ink)}
+.part.earn{color:var(--gold);display:flex;align-items:center;gap:10px}
+.part.earn::after{content:"NEW";font-size:10px;letter-spacing:.1em;padding:3px 8px;border-radius:999px;background:var(--gold);color:#1a1306}
+.toc h4.earn{color:var(--gold);display:flex;align-items:center;gap:8px}
+.toc h4.earn::after{content:"NEW";font-size:9px;padding:2px 6px;border-radius:999px;background:var(--gold);color:#1a1306;letter-spacing:.08em}
+.kw{display:none}
+.pb .card.pb-gold,.card.pb-gold{border-color:color-mix(in srgb,var(--gold) 45%,var(--line))}
+.pb-tag{display:inline-block;font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:3px 9px;border-radius:7px;background:var(--accdim);color:var(--acc2);margin-bottom:8px}
+.pb-tag.gold{background:var(--golddim);color:var(--gold)}
+.pb-no{color:var(--faint)!important}
+.pb-flow{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin:14px 0;max-width:860px}
+.pb-flow span{padding:8px 12px;border-radius:9px;border:1px solid var(--line);background:var(--bg2);font-weight:600;font-size:13.5px}
+.pb-flow i{font-style:normal;color:var(--faint)}
+.pb-cur{display:inline-flex;gap:2px;padding:3px;border:1px solid var(--line);border-radius:11px;background:var(--bg2);margin:6px 0 2px}
+.pb-cur button,.pb-seg button{border:0;background:transparent;color:var(--mute);font:700 13px Inter,sans-serif;padding:8px 14px;border-radius:8px;cursor:pointer}
+.pb-cur button.on{background:var(--acc);color:#fff}
+.pb-tbl{max-width:860px;overflow-x:auto}
+.pb-tbl table{min-width:540px}
+td.pb-n{font:500 13.5px ui-monospace,SFMono-Regular,Menlo,monospace;white-space:nowrap}
+.pb-qb{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:14px;max-width:860px;margin-top:16px}
+.pb-fl{margin-bottom:16px}
+.pb-fl>span{display:block;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--faint);margin-bottom:7px}
+.pb-qb select{width:100%;height:42px;border-radius:10px;border:1px solid var(--line);background:var(--bg3);color:var(--ink);padding:0 10px;font:inherit;font-size:14px}
+.pb-seg{display:flex;flex-wrap:wrap;gap:6px}
+.pb-seg button{flex:1;min-width:84px;border:1px solid var(--line);background:var(--bg3);padding:10px}
+.pb-seg button.on{border-color:var(--acc);background:var(--accdim);color:var(--ink)}
+.pb-opts{display:grid;gap:6px}
+.pb-opts label{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:8px 12px;border:1px solid var(--line);border-radius:9px;background:var(--bg3);font-size:14px;cursor:pointer}
+.pb-opts label span{display:flex;align-items:center;gap:8px}
+.pb-opts input{accent-color:var(--acc)}
+.pb-opts em{font:500 12.5px ui-monospace,Menlo,monospace;font-style:normal;color:var(--faint);white-space:nowrap}
+.pb-total{position:sticky;top:84px;align-self:start}
+.pb-big{font-size:34px;font-weight:800;letter-spacing:-.02em;margin:6px 0 2px}
+.pb-row{display:flex;justify-content:space-between;gap:10px;font-size:14px;padding:9px 0;border-bottom:1px dashed var(--line)}
+.pb-row b{font:600 13.5px ui-monospace,Menlo,monospace}
+.pb-tpl{border:1px solid var(--line);border-radius:14px;background:var(--bg2);margin:14px 0;max-width:860px;overflow:hidden}
+.pb-th{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 12px 10px 16px;border-bottom:1px solid var(--line);background:var(--bg3)}
+.pb-th b{font-size:14.5px}.pb-th small{display:block;color:var(--faint);font-size:12.5px}
+.pb-copy{flex-shrink:0;border:0;background:var(--acc);color:#fff;font:700 13px Inter,sans-serif;padding:8px 14px;border-radius:8px;cursor:pointer;box-shadow:var(--hi)}
+.pb-copy.done{background:var(--ok)}
+.pb-copy.wide{width:100%;margin-top:14px;padding:12px}
+.pb-tpl pre{margin:0;padding:16px;white-space:pre-wrap;word-wrap:break-word;font:500 13.5px/1.65 ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--mute);max-height:440px;overflow:auto}
+.pb-hero{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px;max-width:860px;padding:20px 22px;border-radius:16px;border:1px solid color-mix(in srgb,var(--gold) 45%,var(--line));background:linear-gradient(120deg,var(--golddim),var(--accdim));margin:18px 0}
+.pb-hero h4{font-size:17px;margin:2px 0 4px}.pb-hero p{margin:0;color:var(--mute);font-size:14.5px}
+.pb-hero>div{flex:1;min-width:240px}
+.pb-cta{display:inline-flex;align-items:center;height:46px;padding:0 20px;border-radius:12px;background:var(--acc);color:#fff!important;font-weight:700;font-size:14.5px;text-decoration:none;box-shadow:var(--hi),0 10px 24px -10px var(--acc)}
+.pb-det{max-width:860px;margin:18px 0;border:1px solid var(--line);border-radius:14px;padding:4px 16px;background:var(--bg2)}
+.pb-det summary{cursor:pointer;font-weight:700;padding:10px 0}
+.pb-det[open]{padding-bottom:6px}
+.pb-prog{display:flex;align-items:center;gap:12px;max-width:760px;font-size:13px;color:var(--faint);margin:10px 0}
+.pb-bar{flex:1;height:6px;border-radius:9px;background:var(--line);overflow:hidden}
+.pb-bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--acc),var(--gold));transition:width .3s}
+.pb-reset{border:0;background:none;color:var(--faint);font:inherit;font-size:13px;cursor:pointer;text-decoration:underline}
+.pb-check{display:grid;gap:6px;max-width:760px}
+.pb-check label{display:flex;gap:12px;align-items:flex-start;padding:11px 14px;border:1px solid var(--line);border-radius:11px;background:var(--bg2);cursor:pointer;font-size:15px}
+.pb-check input{appearance:none;-webkit-appearance:none;flex-shrink:0;width:19px;height:19px;margin-top:3px;border:1.5px solid var(--line2);border-radius:5px;display:grid;place-items:center;cursor:pointer}
+.pb-check input:checked{background:var(--ok);border-color:var(--ok)}
+.pb-check input:checked::after{content:"";width:5px;height:9px;border:solid #fff;border-width:0 2px 2px 0;transform:rotate(45deg) translate(-1px,-1px)}
+.pb-check input:checked+span{color:var(--faint);text-decoration:line-through}
+@media(max-width:980px){.pb-qb{grid-template-columns:1fr}.pb-total{position:static}.pb-banner{grid-template-columns:1fr}}
+@media(max-width:600px){.pbbtn span{display:none}.pbbtn{width:36px;padding:0;justify-content:center}.pb-banner{padding:18px}.pb-banner .acts{flex-direction:row;flex-wrap:wrap}.pb-banner a{flex:1}}
 </style>
 </head>
 <body>
@@ -129,6 +207,7 @@ footer{margin-top:70px;padding-top:24px;border-top:1px solid var(--line);color:v
   <div class="logo">P</div>
   <div><div class="bname">Pahina Builder Master Guide</div><div class="bsub">Everything, step by step, with pictures</div></div>
   <label class="search"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input id="q" type="search" placeholder="Search the guide (e.g. webhook, GCash, booking)"></label>
+  <a class="pbbtn" href="#pb-start" title="Funnel Builder Playbook: sell funnels to clients"><svg viewBox="0 0 24 24"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg><span>Playbook</span></a>
   <button class="tbtn theme-btn" id="themeBtn" type="button">Light</button>
 </header>
 
@@ -137,10 +216,13 @@ footer{margin-top:70px;padding-top:24px;border-top:1px solid var(--line);color:v
 <main id="main">
 
 <div class="hero">
-  <div class="kicker">Master Guide · Updated October 2026</div>
+  <div class="kicker">Master Guide · Updated November 2026</div>
   <h1>Build pages that sell, with Pahina Builder</h1>
   <p class="lead">You describe your business. <b>Pahina Builder</b> writes the sales copy, designs the page, adds checkout, booking, chat, tracking and SEO, and hands you a finished website you own. This guide walks you through every screen, from your very first login to your hundredth page.</p>
   <div class="chips"><span class="chip">No coding</span><span class="chip">No monthly fee</span><span class="chip">Unlimited pages</span><span class="chip">Your own website file</span></div>
+  <div class="pb-banner"><div><div class="k">New · Part 6</div><h3>Funnel Builder Playbook</h3><p>Turn Pahina Builder into a service you sell: packages, PHP and USD pricing, a quote builder, outreach scripts, a branded client onboarding link and launch checklists.</p></div>
+  <div class="acts"><a class="p" href="#pb-start">Open the Playbook</a><a class="s" href="#pb-onboarding">Client onboarding</a></div></div>
+  <div class="pb-chips">Popular searches: <button type="button" data-q="pricing">Pricing</button><button type="button" data-q="onboarding">Client onboarding</button><button type="button" data-q="proposal">Upwork proposal</button><button type="button" data-q="agreement">Agreement</button><button type="button" data-q="checklist">Checklist</button><button type="button" data-q="GCash">GCash</button></div>
 </div>
 
 <!-- ===================================================== PART 1 -->
@@ -882,7 +964,7 @@ function doGet() {
 <li><b>How many pages can I make?</b> Unlimited.</li>
 <li><b>Is there a monthly fee?</b> No. You only use your own free Gemini key and free hosting.</li>
 <li><b>Who owns the page?</b> You do. It's your file, on your host.</li>
-<li><b>Can I sell pages to clients?</b> Yes. Build for them, then hand them the files or a .pahina project.</li>
+<li><b>Can I sell pages to clients?</b> Yes. Build for them, then hand them the files or a .pahina project. See the <a href="#pb-start">Funnel Builder Playbook</a> for packages, pricing and client onboarding.</li>
 <li><b>Match a Design says my key was not accepted.</b> Check that you pasted the full Gemini key at the top of the app. If it still fails, make a new free key at aistudio.google.com/apikey.</li>
 <li><b>Match a Design says my key reached its limit.</b> Free keys have a per-minute and per-day limit. Wait a minute, or try again tomorrow.</li>
 <li><b>Can Pahina Builder make the images for me?</b> Not with a free Gemini key: Google does not include its image models in the free tier. Copy the prompts into Gemini, ChatGPT or Midjourney instead.</li>
@@ -891,7 +973,533 @@ function doGet() {
 </ul>
 </section>
 
-<p class="empty" id="empty">No results. Try a different word, like "booking", "GCash" or "upload".</p>
+<!-- ===================================================== PART 6 -->
+<div class="part earn">Part 6 · Earn: Funnel Builder Playbook</div>
+
+<section id="pb-start" class="pb" data-title="Playbook: sell funnels to clients">
+<h2><span class="n">31</span>Playbook: sell funnels to clients</h2>
+<span class="kw">playbook earn money income clients client freelance freelancer VA virtual assistant service business kita kumita raket negosyo funnel builder</span>
+<p class="sub">Pahina Builder does the building. This part of the guide gives you everything around it: what to offer, what to charge, what to send your client, and what to check before you go live.</p>
+<div class="grid2">
+<div class="card"><h4>Pahina Builder does</h4><ul class="plain"><li>Sales copy, design and mobile layout</li><li>Payment buttons, 0% commission</li><li>Opt-in, upsell, downsell and thank you pages</li><li>Website pages, SEO, pixels, A/B headline test</li><li>Suite: booking, orders + stock, AI chat, store</li></ul></div>
+<div class="card pb-gold"><h4>You do</h4><ul class="plain"><li>Find the client and agree on the scope</li><li>Send your onboarding link (Chapter 37)</li><li>Fill in Pahina Builder with their answers</li><li>Review, run the pre-launch checklist, launch</li><li>Report results and offer monthly care</li></ul></div>
+</div>
+<h3>How one client project flows</h3>
+<div class="pb-flow"><span>Outreach</span><i>&rarr;</i><span>Quote</span><i>&rarr;</i><span>50% deposit</span><i>&rarr;</i><span>Onboarding link</span><i>&rarr;</i><span>Build in Pahina</span><i>&rarr;</i><span>Revisions</span><i>&rarr;</i><span>Final payment</span><i>&rarr;</i><span>Launch</span><i>&rarr;</i><span>Monthly care</span></div>
+<h3>Where to find everything</h3>
+<table>
+<tr><th>I want to…</th><th>Go to</th></tr>
+<tr><td>Know what packages to sell</td><td><a href="#pb-packages">Chapter 32 · Service packages</a></td></tr>
+<tr><td>Know how much to charge</td><td><a href="#pb-pricing">Chapter 33 · Pricing</a> and <a href="#pb-quote">34 · Quote builder</a></td></tr>
+<tr><td>Find my first clients</td><td><a href="#pb-clients">Chapter 35</a> and <a href="#pb-scripts">36 · Outreach scripts</a></td></tr>
+<tr><td>Onboard a new client</td><td><a href="#pb-onboarding">Chapter 37 · Client onboarding link</a></td></tr>
+<tr><td>Send the right message at each stage</td><td><a href="#pb-messages">Chapter 38 · Client messages</a></td></tr>
+<tr><td>Protect myself with a written agreement</td><td><a href="#pb-agreement">Chapter 39 · Service agreement</a></td></tr>
+<tr><td>Build and launch the page</td><td><a href="#pb-delivery">Chapter 40</a> and <a href="#pb-prelaunch">41 · Pre-launch checklist</a></td></tr>
+<tr><td>Earn every month from the same client</td><td><a href="#pb-recurring">Chapter 44 · Recurring income</a></td></tr>
+</table>
+<div class="call tip"><p><b>Tip:</b> type a word like <b>pricing</b>, <b>onboarding</b>, <b>Upwork</b> or <b>agreement</b> in the search bar at the top to jump straight to it.</p></div>
+</section>
+
+<section id="pb-packages" class="pb" data-title="Your service packages">
+<h2><span class="n">32</span>Your service packages</h2>
+<span class="kw">packages package offer services sales page website funnel add-ons add on inclusions scope what to sell ano ibebenta</span>
+<p class="sub">Clear packages sell faster than "how much for a website?". Each one has a fixed scope, so clients know what they get and you avoid endless extra work.</p>
+<div class="grid2">
+<div class="card"><span class="pb-tag">Package A</span><h4>Sales Page</h4><p>One focused page that sells one offer. For coaches, sellers and anyone running ads to one product.</p><p><b>Includes:</b> 1 long-form sales page, copy from the client's answers, 1 payment method, thank you page, mobile check, 2 revision rounds.</p><p class="pb-no"><b>Not included:</b> extra funnel pages, pixels, domain, ads.</p></div>
+<div class="card"><span class="pb-tag">Package B</span><h4>Business Website</h4><p>A credible site for a business that only has a Facebook page.</p><p><b>Includes:</b> home plus up to 5 pages (About, Services, Pricing, FAQ, Contact with map), copy for every page, inquiry button, SEO, 2 revision rounds.</p><p class="pb-no"><b>Not included:</b> funnel pages, booking, store, logo design.</p></div>
+<div class="card pb-gold"><span class="pb-tag gold">Package C · Best seller</span><h4>Complete Sales Funnel</h4><p>The full path from lead to buyer. This is where the higher fees are.</p><p><b>Includes:</b> opt-in, sales, upsell, downsell and thank you pages, payment, Meta Pixel and GA4, leads to Google Sheet, A/B headline test, 3 revision rounds.</p><p class="pb-no"><b>Not included:</b> email sequences, running ads, website pages.</p></div>
+<div class="card"><span class="pb-tag">Package D</span><h4>Funnel + Website</h4><p>Everything in Package C plus the website pages.</p><p><b>Includes:</b> Package C, up to 5 website pages, legal pages and cookie banner, chat bubble, 30 days of small fixes after launch, 3 revision rounds.</p><p class="pb-no"><b>Not included:</b> email sequences, ads management, photography.</p></div>
+</div>
+<h3>Add-ons you can sell on top</h3>
+<table>
+<tr><th>Add-on</th><th>What you set up</th><th>Built with</th></tr>
+<tr><td><b>Online booking</b></td><td>Services, schedule, deposit or full payment</td><td>Pahina Book (Chapter 24)</td></tr>
+<tr><td><b>Order link + stock</b></td><td>Order form with QR payment, inventory</td><td>Pahina Orders + Stock (Chapter 24)</td></tr>
+<tr><td><b>AI chat assistant</b></td><td>A chatbot that knows the client's FAQs and prices</td><td>Pahina AI (Chapter 24)</td></tr>
+<tr><td><b>Online store</b></td><td>Product catalog with checkout</td><td>Pahina Store (Chapter 24)</td></tr>
+<tr><td><b>Leads to Google Sheet</b></td><td>Every form entry saved to the client's Sheet</td><td>Chapter 20</td></tr>
+<tr><td><b>Tracking setup</b></td><td>Meta Pixel, GA4, TikTok Pixel, Purchase event</td><td>Chapter 22</td></tr>
+<tr><td><b>Ad copy pack</b></td><td>Ad copy and image prompts (not finished ad graphics)</td><td>Chapter 14 and 25</td></tr>
+<tr><td><b>Monthly care</b></td><td>Edits, promos, a monthly results report</td><td>Chapter 44</td></tr>
+</table>
+<div class="call tip"><p><b>Start with one package.</b> Most new funnel builders do best leading with Package A or C, then adding the rest after two or three happy clients.</p></div>
+</section>
+
+<section id="pb-pricing" class="pb" data-title="Pricing in PHP and USD">
+<h2><span class="n">33</span>Pricing in PHP and USD</h2>
+<span class="kw">pricing price prices rates rate how much charge fee fees magkano singil presyo bayad peso dollar usd php international local deposit revision rush</span>
+<p class="sub">Typical market ranges based on current freelancer rates and job posts (Chapter 46). They are not guaranteed earnings. Start on the low end until you have proof, then move up.</p>
+<div class="pb-cur" id="pbCur"><button type="button" data-c="php" class="on">PHP · Local clients</button><button type="button" data-c="usd">USD · International</button></div>
+<div class="pb-tbl" id="pbPHP"><table>
+<tr><th>Package</th><th>Starter<br>0 to 3 clients</th><th>Mid<br>3+ testimonials</th><th>Premium<br>proven results</th></tr>
+<tr><td><b>A · Sales Page</b></td><td class="pb-n">₱3,500 – 5,000</td><td class="pb-n">₱6,000 – 10,000</td><td class="pb-n">₱12,000 – 20,000</td></tr>
+<tr><td><b>B · Business Website</b></td><td class="pb-n">₱6,000 – 10,000</td><td class="pb-n">₱12,000 – 20,000</td><td class="pb-n">₱20,000 – 30,000</td></tr>
+<tr><td><b>C · Complete Sales Funnel</b></td><td class="pb-n">₱10,000 – 15,000</td><td class="pb-n">₱18,000 – 30,000</td><td class="pb-n">₱30,000 – 50,000</td></tr>
+<tr><td><b>D · Funnel + Website</b></td><td class="pb-n">₱15,000 – 25,000</td><td class="pb-n">₱28,000 – 45,000</td><td class="pb-n">₱45,000 – 70,000</td></tr>
+</table></div>
+<div class="pb-tbl" id="pbUSD" hidden><table>
+<tr><th>Package</th><th>Starter<br>0 to 3 clients</th><th>Mid<br>3+ reviews</th><th>Premium<br>proven results</th></tr>
+<tr><td><b>A · Sales Page</b></td><td class="pb-n">$120 – 250</td><td class="pb-n">$300 – 500</td><td class="pb-n">$600 – 1,000</td></tr>
+<tr><td><b>B · Business Website</b></td><td class="pb-n">$250 – 450</td><td class="pb-n">$500 – 900</td><td class="pb-n">$1,000 – 1,800</td></tr>
+<tr><td><b>C · Complete Sales Funnel</b></td><td class="pb-n">$350 – 700</td><td class="pb-n">$750 – 1,500</td><td class="pb-n">$1,500 – 3,000</td></tr>
+<tr><td><b>D · Funnel + Website</b></td><td class="pb-n">$600 – 1,000</td><td class="pb-n">$1,200 – 2,200</td><td class="pb-n">$2,500 – 4,500</td></tr>
+</table></div>
+<h3>Add-on prices</h3>
+<div class="pb-tbl"><table>
+<tr><th>Add-on</th><th>PHP (local)</th><th>USD (international)</th></tr>
+<tr><td>Online booking setup</td><td class="pb-n">₱2,500 – 5,000</td><td class="pb-n">$75 – 200</td></tr>
+<tr><td>Order link + stock setup</td><td class="pb-n">₱2,500 – 5,000</td><td class="pb-n">$75 – 200</td></tr>
+<tr><td>AI chat assistant setup</td><td class="pb-n">₱3,000 – 6,000</td><td class="pb-n">$100 – 250</td></tr>
+<tr><td>Online store setup</td><td class="pb-n">₱5,000 – 10,000</td><td class="pb-n">$150 – 350</td></tr>
+<tr><td>Leads to Google Sheet</td><td class="pb-n">₱1,000 – 2,000</td><td class="pb-n">$30 – 60</td></tr>
+<tr><td>Tracking setup (pixels + GA4)</td><td class="pb-n">₱1,500 – 3,000</td><td class="pb-n">$50 – 120</td></tr>
+<tr><td>Ad copy pack</td><td class="pb-n">₱1,500 – 3,000</td><td class="pb-n">$40 – 100</td></tr>
+<tr><td>Monthly care plan</td><td class="pb-n">₱2,500 – 8,000 / mo</td><td class="pb-n">$100 – 400 / mo</td></tr>
+</table></div>
+<h3>Payment terms that protect you</h3>
+<div class="grid2">
+<div class="card"><h4>50% deposit before you start</h4><p>No deposit, no build. The other 50% is due before the page goes live or before you hand over files.</p></div>
+<div class="card"><h4>Revision limits</h4><p>2 rounds for Packages A and B, 3 for C and D. Extra rounds: ₱500 to ₱1,000 or $20 to $40 each.</p></div>
+<div class="card"><h4>Rush fee</h4><p>Need it in 48 hours? Add 25% to 50%, and only once the client's answers are complete.</p></div>
+<div class="card"><h4>Scope changes</h4><p>New pages or features after approval are quoted separately. Point back to the package list.</p></div>
+</div>
+<h3>When to raise your prices</h3>
+<ul class="plain">
+<li><b>After 3 testimonials:</b> move from Starter to Mid on your next quote.</li>
+<li><b>When you're booked 2+ weeks ahead:</b> raise prices 15% to 25%.</li>
+<li><b>When a client gets results:</b> turn it into a case study and quote Premium for the same niche.</li>
+<li><b>Specialize.</b> "Funnels for dental clinics" can charge more than "I make websites".</li>
+</ul>
+<div class="call warn"><p><b>Platform fees.</b> Upwork and Fiverr keep part of what you earn (Fiverr keeps 20% of each order). Price your gigs so you still reach your target after fees.</p></div>
+</section>
+
+<section id="pb-quote" class="pb" data-title="Quote builder">
+<h2><span class="n">34</span>Quote builder</h2>
+<span class="kw">quote quotation calculator estimate compute price total deposit magkano sisingilin</span>
+<p class="sub">Pick a package, your level and add-ons. You get a suggested price, the deposit to ask for, and a ready message to send.</p>
+<div class="pb-qb">
+<div class="card">
+<div class="pb-fl"><span>Client location</span><div class="pb-seg" id="qCur"><button type="button" class="on" data-v="php">Philippines (PHP)</button><button type="button" data-v="usd">International (USD)</button></div></div>
+<div class="pb-fl"><span>Package</span><select id="qPkg"><option value="A">A · Sales Page</option><option value="B">B · Business Website</option><option value="C" selected>C · Complete Sales Funnel</option><option value="D">D · Funnel + Website</option></select></div>
+<div class="pb-fl"><span>Your level</span><div class="pb-seg" id="qTier"><button type="button" class="on" data-v="0">Starter</button><button type="button" data-v="1">Mid</button><button type="button" data-v="2">Premium</button></div></div>
+<div class="pb-fl"><span>Add-ons</span><div class="pb-opts" id="qAdd"></div></div>
+<div class="pb-fl" style="margin:0"><span>Rush delivery</span><div class="pb-seg" id="qRush"><button type="button" class="on" data-v="0">No</button><button type="button" data-v="0.25">+25%</button><button type="button" data-v="0.5">+50%</button></div></div>
+</div>
+<div class="card pb-gold pb-total">
+<span class="pb-tag gold">Suggested quote</span>
+<div class="pb-big" id="qTotal">—</div>
+<p style="margin:0 0 10px;color:var(--faint);font-size:13px">One-time project fee, using the middle of each range</p>
+<div class="pb-row"><span>Deposit to start (50%)</span><b id="qDep">—</b></div>
+<div class="pb-row"><span>Due before launch</span><b id="qBal">—</b></div>
+<div class="pb-row"><span>Monthly care (optional)</span><b id="qCare">—</b></div>
+<button type="button" class="pb-copy wide" id="qCopy">Copy quote message</button>
+</div>
+</div>
+</section>
+
+<section id="pb-clients" class="pb" data-title="Get your first clients">
+<h2><span class="n">35</span>Get your first clients</h2>
+<span class="kw">first client clients find leads prospects portfolio sample demo where to find upwork onlinejobs fiverr linkedin facebook groups saan hahanap</span>
+<p class="sub">The fastest route to client number one: show a business their own page before they pay anything.</p>
+<h3>The sample page strategy</h3>
+<ol class="steps">
+<li><b>Pick 5 businesses with weak or no websites.</b> Salons, clinics, resorts, food sellers, tutors and gyms on Facebook and Google Maps. Only a Facebook page is a good sign.</li>
+<li><b>Build a demo page for 2 of them</b> in Pahina Builder using public info. Mark it as a demo, and never publish it under their name without permission.</li>
+<li><b>Send a short message with a screenshot</b> using the "Demo page" script in Chapter 36. Show, don't explain.</li>
+<li><b>Offer a starter price to your first 3 clients</b> in exchange for a testimonial and permission to show the page in your portfolio.</li>
+<li><b>Add every finished page to your portfolio.</b> A portfolio page made with Pahina Builder works great.</li>
+</ol>
+<div class="grid2">
+<div class="card"><h4>Local (Philippines)</h4><ul class="plain"><li>Facebook groups for small business owners and online sellers</li><li>Businesses on Google Maps without a website link</li><li>Coaches and course creators selling through Messenger</li><li>Referrals from friends, family and past clients</li><li>Your own profile: post your demo pages</li></ul></div>
+<div class="card"><h4>International</h4><ul class="plain"><li>Upwork: search "sales funnel", "landing page", "sales page"</li><li>OnlineJobs.ph: funnel builder and landing page jobs</li><li>Fiverr: post a gig for Package A or C</li><li>LinkedIn: coaches, consultants, small agencies</li><li>Cold email to businesses with outdated pages</li></ul></div>
+</div>
+<div class="call tip"><p><b>Agency tip:</b> many international jobs are posted by marketing agencies that need someone to build funnels for their clients. One agency can send you steady work every month.</p></div>
+</section>
+
+<section id="pb-scripts" class="pb" data-title="Outreach scripts">
+<h2><span class="n">36</span>Outreach scripts</h2>
+<span class="kw">scripts script template templates message dm pm cold email proposal upwork fiverr gig facebook post follow up follow-up outreach copy paste</span>
+<p class="sub">Replace everything in [brackets]. Keep it short, and always personalize the first line.</p>
+<div class="pb-tpl"><div class="pb-th"><div><b>Demo page message</b><small>Facebook or Messenger, local business</small></div><button type="button" class="pb-copy">Copy</button></div><pre>Hi [Name]! I came across [Business] on [Facebook / Google Maps] and loved your [specific detail].
+
+I noticed you don't have a page where customers can see your [services / products], prices and order or book in one place, so I made a quick sample for you. Screenshot below.
+
+If you like it, I can finish it with your real photos, prices and a [GCash / booking / order] button so customers can pay or book right away.
+
+Would you like me to send the full preview link?</pre></div>
+<div class="pb-tpl"><div class="pb-th"><div><b>Facebook group post</b><small>Check each group's rules first</small></div><button type="button" class="pb-copy">Copy</button></div><pre>Still selling only through comments and PMs?
+
+I build sales pages and websites for small businesses where customers can see your offer, your prices and pay or book in one link. No monthly platform fees on your sales.
+
+Here's a sample I made for a [niche]: [link]
+
+Taking [3] new clients this month at an intro rate.
+Comment "PAGE" or send me a message.</pre></div>
+<div class="pb-tpl"><div class="pb-th"><div><b>Upwork proposal</b><small>Funnel or landing page job</small></div><button type="button" class="pb-copy">Copy</button></div><pre>Hi [Client name],
+
+You need [repeat their goal in one line, e.g. "a sales funnel for your coaching program that turns ad clicks into booked calls"]. I can build that.
+
+Here's how I'd approach it:
+1. Opt-in page that saves leads to your Google Sheet
+2. Sales page with a clear offer, proof, FAQ and one strong call to action
+3. Upsell and thank you pages, with Meta Pixel and GA4 tracking the purchase
+
+Relevant sample: [link]
+
+Timeline: first draft in [3 to 5] days after I receive your details, then [2] revision rounds.
+
+One quick question so I can be specific: [ask one smart question about their offer or audience].
+
+[Your name]</pre></div>
+<div class="pb-tpl"><div class="pb-th"><div><b>Cold email</b><small>International small business</small></div><button type="button" class="pb-copy">Copy</button></div><pre>Subject: Quick idea for [Business]
+
+Hi [Name],
+
+I was looking at [Business] and noticed [specific observation, e.g. "your booking goes through a contact form with no prices"].
+
+I build simple sales pages where visitors can see the offer, read answers to common questions and [book / pay] right away.
+
+I put together a short mockup for you: [link or screenshot]
+
+Worth a 10-minute look? If it's not a fit, no worries at all.
+
+[Your name]
+[Portfolio link]</pre></div>
+<div class="pb-tpl"><div class="pb-th"><div><b>Follow-up</b><small>3 to 4 days after no reply</small></div><button type="button" class="pb-copy">Copy</button></div><pre>Hi [Name], just bumping this up in case it got buried. Happy to send the full sample page for [Business]. No commitment needed.</pre></div>
+<div class="pb-tpl"><div class="pb-th"><div><b>Fiverr gig description</b><small>For Package A or C</small></div><button type="button" class="pb-copy">Copy</button></div><pre>I will build a high-converting sales page or complete sales funnel for your offer
+
+What you get:
+- Sales page copy written for your offer and your buyer
+- Clean, mobile-first design
+- Payment button connected (PayPal, Stripe or your checkout link)
+- Opt-in, upsell, downsell and thank you pages (Funnel package)
+- Meta Pixel and Google Analytics set up (Funnel package)
+
+How it works:
+1. Order and fill in my short onboarding form
+2. Get your first draft in [3 to 5] days
+3. Request revisions, then launch
+
+Message me before ordering if you're not sure which package fits.</pre></div>
+</section>
+
+<section id="pb-onboarding" class="pb" data-title="Client onboarding link">
+<h2><span class="n">37</span>Client onboarding link</h2>
+<span class="kw">onboarding onboard intake intake form questionnaire client form new client kickoff brief requirements questions client portal branded link pahina studio formsubmit web3forms</span>
+<p class="sub">Send your client one branded link. They see their project, answer questions that match Pahina Builder, agree to your terms, and you both get the answers by email. Made with <b>Pahina Studio</b>, free for Pahina users.</p>
+<div class="pb-hero">
+<div><span class="pb-tag gold">Recommended</span><h4>Set up your onboarding link once, use it for every client</h4><p>Your name, your colors, your package and your terms, front and center.</p></div>
+<a class="pb-cta" href="https://pahinastudio.vercel.app/#onboarding-funnel" target="_blank" rel="noopener">Open Client Onboarding in Pahina Studio &rarr;</a>
+</div>
+<h3>Set it up (about 5 minutes)</h3>
+<ol class="steps">
+<li>Click <kbd>Open Client Onboarding in Pahina Studio</kbd> above. It opens on the right screen with <b>Sales page, funnel or website</b> already selected.</li>
+<li>Type <b>Your name</b> and <b>Your business or studio name</b>, then pick a <b>Link color</b> that matches your brand.</li>
+<li>In <b>Project details</b>, click a package (A to D). The inclusions fill in for you. Edit them if you like, then add the <b>project fee</b>, <b>deposit</b>, <b>days to first draft</b> and <b>revision rounds</b>. Not sure what to charge? Use the <a href="#pb-quote">Quote builder</a>.</li>
+<li>In <b>What to ask</b>, keep every section on for a full funnel. For a simple sales page you can turn off <b>Payments and tools</b> or <b>Questions and launch</b>.</li>
+<li>In <b>How answers reach you</b>, choose <b>FormSubmit</b>, type your email and click <kbd>Send a test</kbd>. Open the <b>Activate Form</b> email and click <kbd>Activate Form</kbd>.</li>
+<li>Click <kbd>Preview as client</kbd> to see exactly what your client sees. Then click <kbd>Copy client link</kbd>.</li>
+</ol>
+<div class="call ok"><p><b>Pahina Studio remembers your settings.</b> For the next client, change the package or fee if needed, then copy the link again.</p></div>
+<h3>What your client sees</h3>
+<div class="grid2">
+<div class="card"><h4>Welcome screen</h4><p>Their project: package, what's included, fee, deposit, first-draft timeline and revision rounds, plus 3 clear steps of how you'll work together.</p></div>
+<div class="card"><h4>7 guided sections</h4><p>Business, Offer, Ideal buyer, Proof, Look and feel, Payments and tools, Launch. The questions match the fields in Pahina Builder, so you can copy answers straight in.</p></div>
+<div class="card"><h4>Review and terms</h4><p>Every answer grouped by section with an Edit button, your project terms, and an "I agree" box before they submit.</p></div>
+<div class="card"><h4>Saves as they go</h4><p>They can close the page and continue later on the same device. They are never asked for passwords.</p></div>
+</div>
+<h3>When the answers arrive</h3>
+<ol class="steps">
+<li>Open the email. Every answer is listed by question.</li>
+<li>Open your client's project in Pahina Builder (Chapter 27) and copy the answers into the <b>Offer</b> wizard (Chapter 7), <b>Brand</b> (Chapter 8) and <b>Payment</b> (Chapter 11).</li>
+<li>Optional: paste the <b>Pahina Studio import code</b> from the email into Pahina Studio's <b>Add a client from their answers</b>. It creates the client and your first 4 project tasks.</li>
+</ol>
+<details class="pb-det"><summary>Prefer Google Forms or a plain message? Copy the full intake form</summary>
+<div class="pb-tpl"><div class="pb-th"><div><b>Client intake form</b><small>Same questions as the onboarding link</small></div><button type="button" class="pb-copy">Copy</button></div><pre>CLIENT INTAKE FORM
+
+ABOUT YOUR BUSINESS
+1. Your name and business name:
+2. What do you sell, in one or two sentences?
+3. Website or social links:
+
+YOUR OFFER
+4. The exact product, service or package this page will sell:
+5. What is included? List everything the buyer gets.
+6. Selling price:
+7. Regular price (if you show a discount):
+8. Bonuses, freebies or limited-time deals:
+9. Guarantee or refund policy:
+
+YOUR IDEAL BUYER
+10. Who is your best customer? (age, job, situation)
+11. What problem are they struggling with before they find you?
+12. What have they already tried that didn't work?
+13. What does life look like after buying from you?
+14. What doubts or questions do they ask before buying?
+
+PROOF
+15. Customer reviews or testimonials (screenshots are fine):
+16. Numbers that build trust (years in business, customers, ratings):
+
+LOOK AND FEEL
+17. Brand colors (or "choose for me"):
+18. 3 words for your style (e.g. minimal, luxury, playful):
+19. Tone: friendly, professional, premium, playful or direct?
+20. Language: English, Tagalog or Taglish?
+21. 2 or 3 websites you like the look of:
+22. Folder link with your logo, 5 to 15 photos, product list and payment QR:
+
+PAYMENTS AND TOOLS
+23. How should customers pay? (GCash, Maya, bank, PayPal, Stripe, COD, your own checkout link)
+24. What should happen after someone pays?
+25. Do you need online booking, an order form with stock, an AI chat assistant, an online store or leads saved to Google Sheet? Add the details.
+
+QUESTIONS AND LAUNCH
+26. The top 5 questions customers ask, with your answers:
+27. Business address and hours (if any):
+28. Best way to reach you:
+29. Do you have a domain name?
+30. Your launch date or deadline:</pre></div>
+</details>
+</section>
+
+<section id="pb-messages" class="pb" data-title="Client messages">
+<h2><span class="n">38</span>Client messages: welcome, draft, launch</h2>
+<span class="kw">welcome message email template draft ready launch live asset checklist files timeline review request testimonial</span>
+<p class="sub">The right message at each stage makes you look professional and saves days of back and forth.</p>
+<div class="pb-tpl"><div class="pb-th"><div><b>Welcome message</b><small>Send right after the deposit lands</small></div><button type="button" class="pb-copy">Copy</button></div><pre>Hi [Name], welcome! Your deposit is received. Thank you for trusting me with [project].
+
+Here's what happens next:
+
+1. Fill in your onboarding form: [your onboarding link]. It takes about 15 minutes and saves as you go. The better your answers, the better your page.
+2. Put your files in one folder (Google Drive is perfect): logo, photos, product list, payment QR and any customer reviews.
+3. I'll send your first draft within [3 to 5] working days after I receive everything.
+4. You get [2 / 3] rounds of revisions.
+5. Final payment, then we go live.
+
+Questions? Just reply here. I usually answer within [hours] on [working days].</pre></div>
+<div class="pb-tpl"><div class="pb-th"><div><b>Draft ready</b><small>When you send the first preview</small></div><button type="button" class="pb-copy">Copy</button></div><pre>Hi [Name], your first draft is ready: [preview link]
+
+Please check it on your phone first, since most of your customers will see it there.
+
+Send all your changes in one message, like this:
+1. Section or heading: what to change
+2. Section or heading: what to change
+
+This counts as revision round 1 of [2 / 3]. Take your time and send everything together.</pre></div>
+<div class="pb-tpl"><div class="pb-th"><div><b>Launch message</b><small>When the page goes live</small></div><button type="button" class="pb-copy">Copy</button></div><pre>It's live! [link]
+
+What's set up:
+- [Payment method] connected. Buyers go to your thank you page after paying.
+- Leads are saved to your Google Sheet: [link]
+- [Meta Pixel / GA4] is tracking visits and purchases.
+
+Next steps for you:
+1. Share the link on your page, bio and posts
+2. If you run ads, use this link as the destination
+3. I'll check the numbers with you in [7 / 30] days
+
+Want me to keep it updated every month (new promos, prices, photos and a monthly report)? My care plan is [price]/month.
+
+One small favor: if you're happy with the work, could you send me a short review I can share?</pre></div>
+<h3>Standard timeline</h3>
+<table>
+<tr><th>Day</th><th>Sales Page (A)</th><th>Funnel (C) or Funnel + Website (D)</th></tr>
+<tr><td><b>Day 1</b></td><td>Deposit, welcome message, onboarding link</td><td>Deposit, welcome message, onboarding link</td></tr>
+<tr><td><b>Day 2 to 3</b></td><td>First draft sent</td><td>Sales page draft sent</td></tr>
+<tr><td><b>Day 4 to 5</b></td><td>Revision rounds</td><td>Opt-in, upsell, downsell, thank you pages and tracking</td></tr>
+<tr><td><b>Day 6 to 7</b></td><td>Final payment, launch</td><td>Revisions, website pages (D)</td></tr>
+<tr><td><b>Day 8 to 10</b></td><td>—</td><td>Pre-launch checks, final payment, launch</td></tr>
+</table>
+<p style="color:var(--mute);font-size:14.5px">The timeline starts when the onboarding answers and files are complete. Say this clearly in your welcome message.</p>
+</section>
+
+<section id="pb-agreement" class="pb" data-title="Simple service agreement">
+<h2><span class="n">39</span>Simple service agreement</h2>
+<span class="kw">agreement contract terms service agreement scope revisions refund cancellation ownership kontrata legal</span>
+<p class="sub">Your onboarding link already shows short project terms. For bigger projects, also send this agreement and ask the client to reply "I agree" before you start.</p>
+<div class="call warn"><p><b>Not legal advice.</b> This is a simple starting template. For large or international contracts, have it reviewed by a lawyer in your country.</p></div>
+<div class="pb-tpl"><div class="pb-th"><div><b>Service agreement</b><small>Edit the brackets, then send</small></div><button type="button" class="pb-copy">Copy</button></div><pre>SERVICE AGREEMENT
+
+Between: [Your name / business] ("Provider")
+And: [Client name / business] ("Client")
+Date: [date]
+
+1. SCOPE
+The Provider will build: [package name and list of included items].
+Anything not listed above is outside this agreement and will be quoted separately.
+
+2. FEE AND PAYMENT
+Total fee: [amount].
+50% deposit ([amount]) is due before work starts.
+The remaining 50% ([amount]) is due before the page goes live or files are handed over.
+Payment method: [GCash / bank / PayPal / Wise].
+
+3. TIMELINE
+First draft within [X] working days after the Client completes the onboarding form and sends all files.
+Delays in sending information or feedback will move the timeline.
+
+4. REVISIONS
+This project includes [2 / 3] revision rounds. Each round is one list of changes sent together.
+Extra rounds: [amount] each. New pages or features are quoted separately.
+
+5. CLIENT RESPONSIBILITIES
+The Client confirms they own or have permission to use all logos, photos, text and reviews they provide, and that their offer and claims are truthful.
+The Client is responsible for their own payment accounts, domain, ad accounts and third-party fees.
+
+6. RESULTS
+The Provider builds the page to support sales and leads. Sales depend on the offer, price, traffic and follow-up, so specific results are not guaranteed.
+
+7. OWNERSHIP
+After full payment, the Client owns the final page content and files delivered for their business. The Provider may show the work in their portfolio unless the Client asks in writing not to.
+
+8. CANCELLATION
+If the Client cancels after work has started, the deposit is non-refundable. If the Provider cannot complete the project, unused payments will be refunded.
+
+Agreed by:
+Provider: ____________  Date: ______
+Client: ____________  Date: ______</pre></div>
+</section>
+
+<section id="pb-delivery" class="pb" data-title="Delivery workflow">
+<h2><span class="n">40</span>Delivery workflow, step by step</h2>
+<span class="kw">workflow delivery build process steps how to build client page sop</span>
+<p class="sub">From onboarding answers to a live page. Each step links to the chapter that shows you where to click.</p>
+<ol class="steps">
+<li><b>Create a project for the client</b> in My Projects, so details never mix. <a href="#projects">Chapter 27</a></li>
+<li><b>Fill in the Offer wizard</b> with their Business, Offer and Buyer answers. <a href="#offer">Chapter 7</a></li>
+<li><b>Set the look:</b> template or AI Custom Design, colors, logo and photos. <a href="#brand">Chapter 8</a> and <a href="#assets">9</a></li>
+<li><b>Connect payment</b> and send buyers to the Thank You page. <a href="#payment">Chapter 11</a></li>
+<li><b>Add funnel and website pages</b> for Packages B, C and D. <a href="#funnel">Chapter 12</a></li>
+<li><b>Generate</b>, then polish with Edit Text, Edit Images and Page Studio. Save a version before big changes. <a href="#generate">Chapter 15</a>, <a href="#edit">16</a> and <a href="#versions">17</a></li>
+<li><b>Connect leads and tracking.</b> <a href="#sheet">Chapter 20</a> and <a href="#pixels">22</a></li>
+<li><b>Add Suite tools</b> if sold: booking, orders + stock, AI chat, store. <a href="#suite">Chapter 24</a></li>
+<li><b>Send the draft</b> (Chapter 38), collect revisions, then run the <a href="#pb-prelaunch">pre-launch checklist</a>.</li>
+<li><b>Publish</b> after final payment, and connect the client's domain if they have one. <a href="#publish">Chapter 19</a></li>
+</ol>
+<div class="call tip"><p><b>Handing over the project?</b> Some clients want their own copy. Use <kbd>Export current funnel</kbd> to give them a .pahina file (Chapter 27). Your Gemini key and license are never included.</p></div>
+</section>
+
+<section id="pb-prelaunch" class="pb" data-title="Pre-launch checklist">
+<h2><span class="n">41</span>Pre-launch checklist</h2>
+<span class="kw">checklist pre-launch prelaunch before launch qa quality check test go live</span>
+<p class="sub">Run this for every client before going live. Your ticks are saved on this device. Click Reset when you start the next client.</p>
+<div class="pb-prog"><div class="pb-bar"><i id="pbBar"></i></div><span id="pbTxt">0 / 0</span><button type="button" class="pb-reset" id="pbReset">Reset</button></div>
+<div class="pb-check" id="pbCheck">
+<label><input type="checkbox"><span><b>Every button</b> goes to the right place: payment, booking, next funnel page</span></label>
+<label><input type="checkbox"><span><b>Test the payment flow:</b> the payment popup or link opens, then the buyer lands on the Thank You page</span></label>
+<label><input type="checkbox"><span><b>Prices, bonuses and dates</b> match what the client approved</span></label>
+<label><input type="checkbox"><span><b>Phone view</b> checked on a real phone: no cut-off text, images load, buttons easy to tap</span></label>
+<label><input type="checkbox"><span><b>Forms</b> send a test lead into the client's Google Sheet</span></label>
+<label><input type="checkbox"><span><b>Pixels</b> fire on page view and on the Thank You page</span></label>
+<label><input type="checkbox"><span><b>Funnel order</b> works: opt-in, sales, upsell or downsell, thank you</span></label>
+<label><input type="checkbox"><span><b>SEO title and description</b> filled in with the business name</span></label>
+<label><input type="checkbox"><span><b>Legal pages</b> added if the client collects data or sells online</span></label>
+<label><input type="checkbox"><span><b>Spelling and names</b> checked: business, products, contact details</span></label>
+<label><input type="checkbox"><span><b>Claims are honest:</b> no fake reviews, no income or health promises the client can't back up</span></label>
+<label><input type="checkbox"><span><b>Images</b> belong to the client or are properly licensed</span></label>
+<label><input type="checkbox"><span><b>Page speed:</b> large photos compressed or on Cloudinary (Chapter 23)</span></label>
+<label><input type="checkbox"><span><b>Booking, order form or chat</b> tested once end to end, if included</span></label>
+<label><input type="checkbox"><span><b>Final payment</b> received and a version saved in Pahina Builder</span></label>
+</div>
+</section>
+
+<section id="pb-after" class="pb" data-title="After launch">
+<h2><span class="n">42</span>After launch: read the numbers</h2>
+<span class="kw">after launch results numbers report analytics conversion rate a/b test headline monthly report</span>
+<p class="sub">Checking the numbers is how you prove your value and keep clients for months.</p>
+<div class="grid2">
+<div class="card"><h4>Visitors</h4><p>How many people reached the page. Low visitors is a traffic problem, not a page problem.</p></div>
+<div class="card"><h4>Opt-in rate</h4><p>Leads divided by opt-in page visitors. Low? Test a new headline or a stronger free offer.</p></div>
+<div class="card"><h4>Sales rate</h4><p>Purchases divided by sales page visitors. Low? Look at the offer, price, proof and FAQ first.</p></div>
+<div class="card"><h4>Upsell take rate</h4><p>How many buyers also take the upsell. Low? Make it a natural next step, priced lower than the main offer.</p></div>
+</div>
+<h3>Reading the A/B headline test</h3>
+<ul class="plain">
+<li>Wait for enough visitors. A few dozen is too early. Aim for a few hundred per version, ideally over a full week.</li>
+<li>Keep the version with the higher conversion rate, not the one you or the client like more.</li>
+<li>Change one thing at a time: headline first, then offer or price, then images.</li>
+</ul>
+<div class="pb-tpl"><div class="pb-th"><div><b>Monthly results report</b><small>For clients on a care plan</small></div><button type="button" class="pb-copy">Copy</button></div><pre>[Business] · Monthly Page Report · [Month]
+
+THE NUMBERS
+- Visitors: [ ]
+- Leads collected: [ ]   (opt-in rate: [ ]%)
+- Sales or bookings: [ ]   (sales rate: [ ]%)
+- Upsell taken: [ ]
+
+WHAT I DID THIS MONTH
+- [e.g. Updated the December promo and prices]
+- [e.g. Tested a new headline. Version B had the higher opt-in rate]
+
+WHAT I RECOMMEND NEXT
+- [One clear recommendation]
+
+Questions? Reply anytime.</pre></div>
+</section>
+
+<section id="pb-limits" class="pb" data-title="Honest limits">
+<h2><span class="n">43</span>Honest limits: what to tell clients</h2>
+<span class="kw">limits guarantee guaranteed sales results promise traffic email sequence what pahina cannot do</span>
+<p class="sub">Being clear about what a page can and can't do protects your reputation and prevents refund requests.</p>
+<div class="grid2">
+<div class="card"><h4>The page handles</h4><ul class="plain"><li>Presenting the offer clearly and persuasively</li><li>Taking payments, bookings and orders</li><li>Collecting leads</li><li>Tracking what visitors do</li></ul></div>
+<div class="card"><h4>Outside the page</h4><ul class="plain"><li><b>Traffic:</b> ads or content bring the visitors</li><li><b>Email follow-up:</b> needs a separate email tool</li><li><b>The offer itself:</b> a weak product or wrong price won't sell on any page</li><li><b>Ad graphics:</b> Pahina gives ad copy and image prompts, not finished ads</li></ul></div>
+</div>
+<div class="pb-tpl"><div class="pb-th"><div><b>"Will this guarantee sales?"</b><small>A calm, honest answer</small></div><button type="button" class="pb-copy">Copy</button></div><pre>Great question. A strong page makes it much easier for people to say yes, but it can't create buyers on its own. Results depend on three things working together: the offer, the people who see it (traffic), and follow-up.
+
+My job is to make the page as clear and convincing as possible and make sure everything works. Once it's live, I can also suggest the next step for bringing in visitors.</pre></div>
+<div class="call warn"><p><b>Never promise specific income or sales numbers</b> to a client, and don't put income or health guarantees on their page. Ad platforms and many countries have strict rules about these claims.</p></div>
+</section>
+
+<section id="pb-recurring" class="pb" data-title="Recurring income">
+<h2><span class="n">44</span>Turn one client into monthly income</h2>
+<span class="kw">recurring monthly retainer care plan maintenance upsell repeat client referral buwanan</span>
+<p class="sub">Keeping a client is easier than finding a new one. A few clients on a monthly plan give you a steady base.</p>
+<ol class="steps">
+<li><b>Offer monthly care at launch.</b> Clients are happiest on launch day.</li>
+<li><b>Upgrade the package.</b> Sales page client? Offer the full funnel. Website client? Offer a sales page for their best seller.</li>
+<li><b>Add a tool.</b> Salon: booking. Online seller: order link with stock. Busy inbox: AI chat assistant.</li>
+<li><b>Seasonal pages.</b> Christmas, Valentine's, 11.11 and anniversary sales. Each promo is a new page and a new invoice.</li>
+<li><b>Ask for referrals</b> after a good result, with a small thank-you discount.</li>
+</ol>
+<table>
+<tr><th>Care plan</th><th>Includes</th><th>PHP / month</th><th>USD / month</th></tr>
+<tr><td><b>Basic</b></td><td>Up to 3 small edits, link checks</td><td>₱2,500 – 3,500</td><td>$100 – 150</td></tr>
+<tr><td><b>Growth</b></td><td>Up to 8 edits, 1 promo page, monthly report</td><td>₱4,500 – 6,000</td><td>$200 – 300</td></tr>
+<tr><td><b>Partner</b></td><td>Unlimited small edits, 2 promo pages, A/B testing, report and call</td><td>₱7,000 – 8,000+</td><td>$350 – 400+</td></tr>
+</table>
+</section>
+
+<section id="pb-license" class="pb" data-title="Your license">
+<h2><span class="n">45</span>Your license: what you can sell</h2>
+<span class="kw">license commercial use client use resell white label allowed can i sell</span>
+<div class="grid2">
+<div class="card"><h4>You can</h4><ul class="plain"><li>Build unlimited pages, funnels and websites for yourself and for clients</li><li>Charge clients any price for your service</li><li>Keep 100% of what you earn from client work</li></ul></div>
+<div class="card"><h4>You cannot</h4><ul class="plain"><li>Resell, share or give away the Pahina Builder app itself</li><li>Share your license or access link</li></ul><p>Want to sell the app under your own brand? That needs the <b>White Label license</b>.</p></div>
+</div>
+</section>
+
+<section id="pb-sources" class="pb" data-title="Rate sources">
+<h2><span class="n">46</span>Where the rates come from</h2>
+<span class="kw">sources research rates market data</span>
+<p class="sub">The ranges in Chapter 33 were set from these public rate guides and job posts, checked November 2026. Rates change, so check your platform before quoting.</p>
+<ul class="plain">
+<li>WebEasyPH, Landing Page Cost in the Philippines (2026): basic pages around ₱5,000 to ₱10,000, high-converting pages ₱20,000+. <a href="https://www.webeasyph.com/landing-page-cost-in-the-philippines/" target="_blank" rel="noopener">webeasyph.com</a></li>
+<li>WebEasyPH, Freelancer Website Cost in the Philippines (2026): 4 to 5 page business sites around ₱10,000 to ₱25,000. <a href="https://www.webeasyph.com/freelancer-website-cost-philippines/" target="_blank" rel="noopener">webeasyph.com</a></li>
+<li>OnlineJobs.ph project post: small landing pages ₱4,000 to ₱8,000, full websites ₱12,000 to ₱20,000. <a href="https://www.onlinejobs.ph/jobseekers/job/WordPress-WooCommerce-Developer-Project-Based-Long-Term-Collaboration-1491095" target="_blank" rel="noopener">onlinejobs.ph</a></li>
+<li>OnlineJobs.ph funnel builder roles: roughly $450 to $1,000 a month for full-time funnel VAs. <a href="https://onlinejobs.ph/jobseekers/job/Go-HighLevel-Specialist-Funnel-Builder-Lead-Generation-Automation-Bonuses-Growth-Potential-1341447" target="_blank" rel="noopener">onlinejobs.ph</a></li>
+<li>goLance, Funnel Builder Hourly Rate Guide (2026): junior around $20/hr, mid-level around $60/hr, senior $80 to $140/hr. <a href="https://golance.com/hiring/best-freelance-funnel-builders-hourly-rate" target="_blank" rel="noopener">golance.com</a></li>
+<li>Upwork funnel builder job posts: budgets from $5 to $15/hr up to $18 to $60/hr. <a href="https://www.upwork.com/freelance-jobs/apply/WordPress-Funnel-Builder-Implementation-Focused_~022059402085611597038/" target="_blank" rel="noopener">upwork.com</a></li>
+<li>Upwork, cost to hire a web designer: median $15 to $30/hr. <a href="https://www.upwork.com/hiring/design/how-much-does-it-cost-to-hire-a-web-designer/" target="_blank" rel="noopener">upwork.com</a></li>
+<li>Fiverr fee structure (2026): sellers keep 80% of each order. <a href="https://hireinsouth.com/post/fiverr-pricing" target="_blank" rel="noopener">hireinsouth.com</a></li>
+</ul>
+<p style="color:var(--faint);font-size:14px">Earnings shown are typical market ranges, not promises. Your results depend on your clients, effort and market.</p>
+</section>
+
+
+<p class="empty" id="empty">No results. Try a different word, like "booking", "GCash", "pricing" or "onboarding".</p>
 <footer>Pahina Builder Master Guide · Part of the Pahina Builder Suite by Digitera Levi. Screens may look slightly different as Pahina Builder keeps improving.</footer>
 </main>
 </div>
@@ -906,7 +1514,7 @@ function doGet() {
   // contents
   const toc = $('#toc'); let html = '', part = null;
   $$('main > .part, main > section').forEach(el => {
-    if (el.classList.contains('part')) { html += '<h4>' + el.textContent.replace(/^Part \d+ · /, '') + '</h4>'; return; }
+    if (el.classList.contains('part')) { html += '<h4' + (el.classList.contains('earn') ? ' class="earn"' : '') + '>' + el.textContent.replace(/^Part \d+ · /, '') + '</h4>'; return; }
     const n = el.querySelector('h2 .n'); html += '<a href="#' + el.id + '" data-id="' + el.id + '">' + (n ? n.textContent + '. ' : '') + el.dataset.title + '</a>';
   });
   toc.innerHTML = html;
@@ -944,6 +1552,38 @@ function doGet() {
   function setTheme(t) { document.body.classList.toggle('light', t === 'light'); $('#themeBtn').textContent = t === 'light' ? 'Dark' : 'Light'; try { localStorage.setItem('pahina-guide-theme', t); } catch (e) {} }
   $('#themeBtn').onclick = () => setTheme(document.body.classList.contains('light') ? 'dark' : 'light');
   let th = null; try { th = localStorage.getItem('pahina-guide-theme'); } catch (e) {} setTheme(th || 'dark');
+})();
+</script>
+
+<script>
+(function(){
+  var $=function(s,r){return (r||document).querySelector(s)}, $$=function(s,r){return [].slice.call((r||document).querySelectorAll(s))};
+  var store={get:function(k){try{return localStorage.getItem(k)}catch(e){return null}},set:function(k,v){try{localStorage.setItem(k,v)}catch(e){}}};
+  function copyText(t,btn,label){var done=function(){btn.textContent='Copied';btn.classList.add('done');setTimeout(function(){btn.textContent=label||'Copy';btn.classList.remove('done')},1600)};
+    function fb(){var a=document.createElement('textarea');a.value=t;a.style.position='fixed';a.style.opacity='0';document.body.appendChild(a);a.select();try{document.execCommand('copy')}catch(e){}a.remove();done()}
+    if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(t).then(done,fb)}else fb()}
+  $$('.pb-tpl .pb-copy').forEach(function(b){b.onclick=function(){copyText(b.closest('.pb-tpl').querySelector('pre').textContent,b)}});
+  // popular searches
+  $$('.pb-chips [data-q]').forEach(function(b){b.onclick=function(){var q=$('#q');q.value=b.dataset.q;q.dispatchEvent(new Event('input'));q.focus();scrollTo({top:0})}});
+  // currency toggle
+  $$('#pbCur button').forEach(function(b){b.onclick=function(){$$('#pbCur button').forEach(function(x){x.classList.toggle('on',x===b)});var u=b.dataset.c==='usd';$('#pbUSD').hidden=!u;$('#pbPHP').hidden=u}});
+  // checklist
+  var boxes=$$('#pbCheck input'),saved=[];try{saved=JSON.parse(store.get('pahina-pb-check')||'[]')}catch(e){}
+  function upd(){var st=boxes.map(function(b){return b.checked}),n=st.filter(Boolean).length;store.set('pahina-pb-check',JSON.stringify(st));$('#pbBar').style.width=(n/boxes.length*100)+'%';$('#pbTxt').textContent=n+' / '+boxes.length}
+  boxes.forEach(function(b,i){b.checked=!!saved[i];b.onchange=upd});$('#pbReset').onclick=function(){boxes.forEach(function(b){b.checked=false});upd()};upd();
+  // quote builder (midpoint of each range)
+  var P={php:{A:[4250,8000,16000],B:[8000,16000,25000],C:[12500,24000,40000],D:[20000,36500,57500]},usd:{A:[185,400,800],B:[350,700,1400],C:[525,1125,2250],D:[800,1700,3500]}};
+  var ADD=[['Online booking',3750,137],['Order link + stock',3750,137],['AI chat assistant',4500,175],['Online store',7500,250],['Leads to Google Sheet',1500,45],['Tracking setup',2250,85],['Ad copy pack',2250,70]];
+  var CARE={php:[3000,5250,7500],usd:[125,250,375]},NAMES={A:'Sales Page',B:'Business Website',C:'Complete Sales Funnel',D:'Funnel + Website'};
+  var q={cur:'php',tier:0,rush:0},last={},box=$('#qAdd');
+  function f(v){return q.cur==='php'?'₱'+(Math.round(v/50)*50).toLocaleString('en-US'):'$'+(Math.round(v/5)*5).toLocaleString('en-US')}
+  function draw(){var on=$$('input',box).map(function(i){return i.checked});box.innerHTML=ADD.map(function(a,i){return '<label><span><input type="checkbox" data-i="'+i+'"'+(on[i]?' checked':'')+'>'+a[0]+'</span><em>'+f(q.cur==='php'?a[1]:a[2])+'</em></label>'}).join('');$$('input',box).forEach(function(i){i.onchange=calc})}
+  function seg(id,key,num){$$('#'+id+' button').forEach(function(b){b.onclick=function(){$$('#'+id+' button').forEach(function(x){x.classList.toggle('on',x===b)});q[key]=num?parseFloat(b.dataset.v):b.dataset.v;if(key==='cur')draw();calc()}})}
+  function calc(){var pk=$('#qPkg').value,t=P[q.cur][pk][q.tier],ex=[];$$('input:checked',box).forEach(function(i){var a=ADD[+i.dataset.i];t+=q.cur==='php'?a[1]:a[2];ex.push(a[0])});t*=1+q.rush;
+    $('#qTotal').textContent=f(t);$('#qDep').textContent=f(t/2);$('#qBal').textContent=f(t/2);$('#qCare').textContent=f(CARE[q.cur][q.tier])+' / mo';
+    last={pk:NAMES[pk],ex:ex,t:f(t),d:f(t/2),c:f(CARE[q.cur][q.tier]),r:q.rush}}
+  seg('qCur','cur',false);seg('qTier','tier',true);seg('qRush','rush',true);$('#qPkg').onchange=calc;draw();calc();
+  $('#qCopy').onclick=function(){var m='Hi [Name]! Here is my quote for your project:\n\nPackage: '+last.pk+(last.ex.length?'\nAdd-ons: '+last.ex.join(', '):'')+(last.r?'\nRush delivery: +'+(last.r*100)+'%':'')+'\n\nTotal: '+last.t+'\nTo start: '+last.d+' (50% deposit)\nBefore launch: '+last.d+'\n\nOptional monthly care after launch: '+last.c+'/month\n\nOnce the deposit is in, I will send you a short onboarding link so I can start right away.';copyText(m,this,'Copy quote message')};
 })();
 </script>
 </body>
