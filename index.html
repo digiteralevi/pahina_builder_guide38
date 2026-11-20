@@ -199,6 +199,15 @@ td.pb-n{font:500 13.5px ui-monospace,SFMono-Regular,Menlo,monospace;white-space:
 .pb-check input:checked+span{color:var(--faint);text-decoration:line-through}
 @media(max-width:980px){.pb-qb{grid-template-columns:1fr}.pb-total{position:static}.pb-banner{grid-template-columns:1fr}}
 @media(max-width:600px){.pbbtn span{display:none}.pbbtn{width:36px;padding:0;justify-content:center}.pb-banner{padding:18px}.pb-banner .acts{flex-direction:row;flex-wrap:wrap}.pb-banner a{flex:1}}
+
+.hx-track{border:1px solid var(--acc);background:var(--accdim);border-radius:14px;padding:14px 16px;margin:16px 0}
+.hx-head{display:flex;justify-content:space-between;gap:10px;font-size:14px}.hx-head span{color:var(--faint)}
+.hx-next{margin:6px 0 10px;font-size:15.5px}.hx-next a{font-weight:600}
+.hx-track details summary{cursor:pointer;font-size:14px;margin-bottom:6px}
+.hx-grp{font-weight:700;font-size:13px;margin:10px 0 4px;color:var(--faint);text-transform:uppercase;letter-spacing:.04em}
+.hx-item{display:flex;gap:8px;align-items:flex-start;font-size:14px;padding:3px 0;cursor:pointer}.hx-item input{margin-top:3px}
+.hx-item.done span{text-decoration:line-through;opacity:.6}
+.hx-btn{margin-top:10px;background:var(--bg3);border:1px solid var(--line);color:var(--ink);border-radius:10px;padding:7px 12px;font:inherit;font-size:13px;cursor:pointer}
 </style>
 <!-- PAHINA-SHARED-BG:start -->
 <style id="pahina-bg-style">
@@ -245,7 +254,7 @@ html.pahina-dark #pahina-bg{--pahina-ov:linear-gradient(rgba(7,10,22,.80),rgba(7
   <div class="chips"><span class="chip">No coding</span><span class="chip">No monthly fee</span><span class="chip">Unlimited pages</span><span class="chip">Your own website file</span></div>
   <div class="pb-banner"><div><div class="k">New · Part 6</div><h3>Funnel Builder Playbook</h3><p>Turn Pahina Builder into a service you sell: packages, PHP and USD pricing, a quote builder, outreach scripts, a branded client onboarding link and launch checklists.</p></div>
   <div class="acts"><a class="p" href="#pb-start">Open the Playbook</a><a class="s" href="#pb-onboarding">Client onboarding</a></div></div>
-  <div class="pb-chips">Popular searches: <button type="button" data-q="pricing">Pricing</button><button type="button" data-q="onboarding">Client onboarding</button><button type="button" data-q="proposal">Upwork proposal</button><button type="button" data-q="agreement">Agreement</button><button type="button" data-q="checklist">Checklist</button><button type="button" data-q="GCash">GCash</button></div>
+  <div class="pb-chips">Popular searches: <button type="button" data-q="handover">Book, AI, Orders: setup to handover</button><button type="button" data-q="pricing">Pricing</button><button type="button" data-q="onboarding">Client onboarding</button><button type="button" data-q="proposal">Upwork proposal</button><button type="button" data-q="agreement">Agreement</button><button type="button" data-q="checklist">Checklist</button><button type="button" data-q="GCash">GCash</button></div>
 </div>
 
 <!-- ===================================================== PART 1 -->
@@ -1148,6 +1157,167 @@ function doGet(e) {
 </div>
 </section>
 
+<section id="handover" data-title="Step by step: Pahina Book, Pahina AI and Orders + Stock, from setup to client handover">
+<h2><span class="n">24B</span>Step by step: Pahina Book, Pahina AI and Orders + Stock, from setup to client handover</h2>
+<p class="sub">For everyone who got Pahina Book, Pahina AI or Pahina Orders + Stock, with or without the Suite. Follow it from top to bottom. Nothing is skipped. Keywords: how to use, suite tools, setup, Supabase, client, handover, links.</p>
+
+<div class="call ok"><p><b>How this works.</b> You do <b>Part 1 only once</b>, ever. After that, every new client is just Parts 2 to 6: you make the client's own app inside your setup, fill it in, test it, then give the client <b>two links per tool</b>: one link for their customers and one link for their own dashboard.</p></div>
+
+<div class="hx-track" id="hxTrack">
+<div class="hx-head"><b>Your next step</b><span id="hxCount"></span></div>
+<p class="hx-next" id="hxNext">Loading...</p>
+<details><summary>Show my checklist (tick each step when it is done)</summary><div id="hxList"></div></details>
+<button type="button" class="hx-btn" id="hxReset">Start a new client (clear Parts 2 to 6)</button>
+</div>
+
+<h3 id="hx-prep">Before you start: what to prepare</h3>
+<table>
+<tr><th>You need</th><th>Why</th></tr>
+<tr><td>A laptop or desktop with Google Chrome</td><td>The first setup is much easier on a big screen. Your client can use a phone later.</td></tr>
+<tr><td>Your own Google account (Gmail)</td><td>To sign in to Supabase (your free database) and Google AI Studio (your free AI key).</td></tr>
+<tr><td>Your Pahina Book license key</td><td>Pahina Book asks for it once per device. Book keys start with <code>FC-book</code>. Suite keys (<code>FC-suite</code>) also work. Orders + Stock and Pahina AI do not ask for a key.</td></tr>
+<tr><td>About 30 minutes for Part 1, then 15 to 20 minutes per tool</td><td>Do it in one sitting so you don't lose your place.</td></tr>
+</table>
+<p><b>Ask your client for these first</b> (copy this list into Messenger):</p>
+<ul>
+<li>Business name, logo, and 5 to 10 good photos (place, products, team)</li>
+<li>Phone number, address, opening days and hours</li>
+<li>For bookings: list of services with price and how long each takes, staff names and their working days, deposit and cancellation rules</li>
+<li>For orders: list of products with name, price, category and photo, stock count per branch, branch names, pickup or delivery, delivery area and fee, staff who will use the cashier</li>
+<li>For the AI: what they sell, prices, 10 questions customers always ask (with answers), payment details, Messenger and FB page links</li>
+<li>GCash or Maya QR, account name and number</li>
+<li>The email the client will use to log in to their dashboard</li>
+</ul>
+
+<h3 id="hx-p1">Part 1 · One-time setup with Pahina Connect (only once, about 30 minutes)</h3>
+<p>Pahina Connect connects Pahina Book, Orders + Stock and Pahina AI to <b>one free database that you own</b> (Supabase). Open <a href="https://pahinaconnect.vercel.app" target="_blank" rel="noopener"><b>pahinaconnect.vercel.app</b></a>. Keep this tab open the whole time. Every button that says "Open..." opens Supabase in a new tab; when you finish there, come back to the Pahina Connect tab and click <kbd>Check</kbd>. <b>Next stays locked until the check passes</b>, so you always know if a step really worked.</p>
+<div class="call warn"><p><b>The 3 things that caused most failed setups.</b> (1) Turning off <b>Confirm email</b> but not clicking <kbd>Save</kbd>. (2) Pasting only part of the engine, or pasting it into a box that already had text. (3) Forgetting to turn <b>Verify JWT</b> OFF on the chat function. The steps below warn you at each one.</p></div>
+<ol class="steps">
+<li id="hx-c1"><b>Step 1 · Welcome.</b> Read the screen and click <kbd>Let's start</kbd>. Have your Gmail ready.</li>
+<li id="hx-c2"><b>Step 2 · Create your project.</b> Click <kbd>Open Supabase</kbd> and sign up with Google. Click <kbd>New project</kbd>. If it asks for an organization, click <kbd>Create organization</kbd> and choose the <b>Free</b> plan. Project name: your business name (or "Pahina Clients" if you will use it for many clients). Database password: click <kbd>Generate a password</kbd>, then copy it to your notes. Region: <b>Southeast Asia (Singapore)</b>. Click <kbd>Create new project</kbd>.<br><b>Make sure:</b> wait until the project dashboard shows and "Setting up project" is gone (1 to 2 minutes). Then go back and click <kbd>My project is ready</kbd>.</li>
+<li id="hx-c3"><b>Step 3 · Connect your project.</b> Click <kbd>Open my API keys</kbd> (pick your project if it asks). Copy the <b>Project URL</b> (looks like <code>https://abcd1234.supabase.co</code>; it is also in Project Settings → Data API) and paste it in Pahina Connect. Copy the <b>Publishable key</b> (starts with <code>sb_publishable_</code>; if you only see Legacy keys, copy <b>anon public</b>) and paste it.<br><b>Never copy the Secret key or service_role key.</b> Pahina Connect will refuse it.<br><b>Make sure:</b> click <kbd>Check connection</kbd> and wait for "Connected".</li>
+<li id="hx-c4"><b>Step 4 · Turn off Confirm email.</b> Click <kbd>Open sign-in settings</kbd>. You are in Authentication → Sign In / Providers. Click <b>Email</b>. Keep <b>Enable Email provider</b> ON. Turn <b>Confirm email</b> OFF (the switch turns grey). <b>Scroll down and click <kbd>Save</kbd>.</b><br><b>Make sure:</b> go back and click <kbd>Check</kbd>. It must say "Confirm email is OFF". If it still says ON, you did not click Save. Wait 10 seconds and check again.<br><i>Why it matters:</i> if Confirm email stays ON, Supabase sends an email for every new login and blocks you after a few. That is the "email rate limit exceeded" error. This step also lets you make client logins later without any emails.</li>
+<li id="hx-c5"><b>Step 5 · Install the engine.</b> Type <b>your own email</b> (this becomes your owner email), then click <kbd>Copy the engine</kbd>. Click <kbd>Open SQL Editor</kbd>. If the editor already has text, click <kbd>+ New query</kbd> (or click inside, press <kbd>Ctrl</kbd> + <kbd>A</kbd> and Delete) so the box is empty. Click inside and paste (<kbd>Ctrl</kbd> + <kbd>V</kbd>, or <kbd>Cmd</kbd> + <kbd>V</kbd> on Mac). Do not type or change anything. Click the green <kbd>Run</kbd>. If Supabase warns about a "destructive operation", click <kbd>Run this query</kbd>.<br><b>Make sure:</b> the Results area at the bottom says <b>Pahina Suite is ready</b>. Go back and click <kbd>Check</kbd>.<br>Red error instead? Go back to Pahina Connect, click <kbd>Copy the engine</kbd> again, open a <b>new</b> query, paste and Run again. It is safe to run many times; it never deletes data.</li>
+<li id="hx-c6"><b>Step 6 · Create your owner account.</b> Use the same email. Type a password with at least 8 characters and write it down. Click <kbd>Create my account</kbd> <b>only once</b> and wait.<br><b>Make sure:</b> it says "Account ready". This one email and password opens Book, Orders + Stock and Pahina AI. If you already made an account in Pahina Book or Orders before with this email, type that same password.</li>
+<li id="hx-c7"><b>Step 7 · Turn on your AI chat.</b> Click <kbd>Copy the AI code</kbd>, then <kbd>Open Edge Functions</kbd>. Click <kbd>Deploy a new function</kbd>, then <kbd>Via Editor</kbd>. Delete all the sample code in the editor, then paste the AI code. At the bottom, change the function name to exactly <code>chat</code> (small letters, nothing else). Click <kbd>Deploy function</kbd> and wait until it says deployed. Now open the <b>Details</b> (or Settings) tab of <b>chat</b>, turn <b>Verify JWT</b> (or "Enforce JWT verification") <b>OFF</b>, and click <kbd>Save</kbd>.<br><b>Make sure:</b> go back and click <kbd>Check</kbd>. It must say "AI chat is on". If it says Verify JWT is still ON, do the Details tab part again and click Save.</li>
+<li id="hx-c8"><b>Step 8 · Add your free Gemini key.</b> Click <kbd>Get a free key</kbd> (Google AI Studio). Sign in with Google, click <kbd>Create API key</kbd>, then <kbd>Copy key</kbd> (new keys start with <code>AQ.</code>, older ones with <code>AIza</code>). Paste it and click <kbd>Save and test my AI</kbd>.<br><b>Make sure:</b> the AI answers the test. If not, read the message: it tells you exactly what to do (see the Troubleshooting table at the end of this chapter).</li>
+<li id="hx-c9"><b>Step 9 · Your tools.</b> Click <kbd>Copy my Connect link</kbd> and bookmark it. It opens all your tools already connected, on any phone or laptop.<br><b>Keep your project awake (3 minutes, do it now):</b> free Supabase projects pause after about a week with no visitors. Click <kbd>Copy my wake-up link</kbd>, open <b>cron-job.org</b>, make a free account, click <kbd>Create cronjob</kbd>, paste the link in <b>URL</b>, choose <b>Every day</b>, click <kbd>Create</kbd>. If Supabase ever emails you about a pause, open your project and click <kbd>Resume project</kbd>. Your data stays safe.</li>
+</ol>
+<div class="call tip"><p><b>Doing this for many clients?</b> One Supabase project can hold many clients. Each client gets their own app and their own login, and can only see their own business. For a big or serious client, you can make a separate Supabase project with the client's own Gmail and run Part 1 again with it.</p></div>
+
+<h3 id="hx-p2">Part 2 · Pahina Book: make the client's booking app (15 to 20 minutes)</h3>
+<ol class="steps">
+<li id="hx-b1"><b>Open Pahina Book.</b> From your Connect link, click <kbd>Open Book</kbd> (or open <b>pahinabook.vercel.app</b> from the same Connect page). Log in with your owner email and password. If it asks for a license key, click the access link in your purchase email, or paste your key (<code>FC-book...</code> or <code>FC-suite...</code>) and click <kbd>Unlock</kbd>. It won't ask again on this device.</li>
+<li id="hx-b2"><b>Create the client's app.</b> In the menu, click <b>Client Apps</b> (first item). Type the client's business name, choose the <b>Kind of business</b>, then click <kbd>Create booking app</kbd>. Open that app so the dashboard is showing the client's business, not yours, before you edit anything.</li>
+<li id="hx-b3"><b>Business Profile.</b> Upload the logo, type the business name, tagline, a few lines about them, phone, address, and add a cover photo. Click <kbd>Save changes</kbd>.</li>
+<li id="hx-b4"><b>Services &amp; Staff.</b> We pre-fill sample services. Click <kbd>Edit</kbd> on each to change it, or <kbd>Add service</kbd>. Type the name, price, how long it takes, and add a photo. Delete samples the client doesn't offer. Add staff with their working days and hours. Save.</li>
+<li id="hx-b5"><b>Schedule.</b> Turn on the open days, set the hours, and set the rules for moving or cancelling a booking. Click <kbd>Save changes</kbd>.</li>
+<li id="hx-b6"><b>Payment methods.</b> Choose Pay in full, Pay a deposit or Pay later. Under <b>QR or account transfer</b>, add the GCash or bank details and upload the QR, or turn on a payment link. Click <kbd>Save changes</kbd>.</li>
+<li id="hx-b7"><b>Booking website.</b> Add the cover photo, service photos, gallery and "Why choose us". This makes the booking link look like a full website. Save.</li>
+<li id="hx-b8"><b>Finish the checklist.</b> Go to <b>Overview</b> and do every item of <b>Get booking-ready</b> until all are ticked. Click an item to jump to the right page.</li>
+<li id="hx-b9"><b>Test it like a customer.</b> On <b>Marketing</b>, click <kbd>Copy link</kbd> and open it on your phone. Book a time. Check that it appears in <b>Bookings</b>, then confirm it. Try to book the same time again: it must say the time was taken. Open the customer link from the success page and cancel the test booking.</li>
+<li id="hx-b10"><b>Make the client's login.</b> Go back to <b>Client Apps</b> and open the client's app. Type the client's email and a password (or let the app make one), then click <kbd>Create client login</kbd>. Click <kbd>Copy message</kbd>. That message already has both links, the email and the password. Keep it for Part 6.<br>If you see "Client logins need the latest engine", go to <b>Settings → Engine update</b>, follow the steps (about 2 minutes, bookings stay safe), then try again.</li>
+</ol>
+<div class="call tip"><p><b>Clinics:</b> ask only for name, phone, service, date and time. Don't ask for medical details on a booking form.</p></div>
+
+<h3 id="hx-p3">Part 3 · Pahina Orders + Stock: make the client's order app (15 to 20 minutes)</h3>
+<ol class="steps">
+<li id="hx-o1"><b>Open Orders + Stock.</b> From your Connect link, click <kbd>Open Orders</kbd>. Log in with the same owner email and password.</li>
+<li id="hx-o2"><b>Create the client's app.</b> Click <b>Client Apps</b> (first item). Type the client's shop name, choose <b>What they sell</b>, and click <kbd>Create order app</kbd>. Open that app so you are editing the client's shop.</li>
+<li id="hx-o3"><b>Shop profile.</b> Logo, shop name, tagline, phone, email, color, currency. Click <kbd>Save changes</kbd>.</li>
+<li id="hx-o4"><b>Branches.</b> Add each branch (or keep one main branch).</li>
+<li id="hx-o5"><b>Products.</b> Click <kbd>Add product</kbd> for each item: name, price, category, photo, and cost if the owner wants profit reports. If you also made a website in Pahina Builder, <b>use exactly the same product names</b> as the website's price list so the cart carries over.</li>
+<li id="hx-o6"><b>Stock.</b> Click a number to set the count per branch, or <kbd>Receive stock</kbd>. Online orders and cashier sales take stock out automatically, and cancelled orders put it back.</li>
+<li id="hx-o7"><b>Ordering.</b> Turn on pickup and/or delivery, set the delivery area and fee, and the order dates and times. Save.</li>
+<li id="hx-o8"><b>Payments.</b> Turn on Pay on receive for cash. Under <b>QR or account transfer</b>, add GCash details and click <kbd>Upload QR</kbd>. Turn on <b>Require payment proof</b> if the owner wants a screenshot. Save.</li>
+<li id="hx-o9"><b>Team &amp; PINs.</b> Create the owner PIN first, then add cashier and manager PINs for the staff. Write them down for the handover.</li>
+<li id="hx-o10"><b>Test it like a customer.</b> On <b>Share &amp; QR</b>, click <kbd>Copy link</kbd> and order from your phone. Check that it appears in <b>Orders</b>, then confirm it. Set one product's stock to 1 and try to order 2: it must refuse. Cancel the test order and check the stock came back. Ring up one sale in <b>Cashier (POS)</b> and print the receipt.</li>
+<li id="hx-o11"><b>Make the client's login.</b> In <b>Client Apps</b>, open the client's app, type the client's email and a password, click <kbd>Create client login</kbd>, then <kbd>Copy message</kbd>. Keep it for Part 6. Also click <kbd>Download QR</kbd> on Share &amp; QR so the owner can print it for the counter.</li>
+</ol>
+
+<h3 id="hx-p4">Part 4 · Pahina AI: make the client's AI employee (10 to 15 minutes)</h3>
+<ol class="steps">
+<li id="hx-a1"><b>Open the AI admin panel.</b> From your Connect link, click <kbd>AI admin panel</kbd>. Log in with your owner email and password.</li>
+<li id="hx-a2"><b>Create the client's bot.</b> Open <b>My Bots</b>. Type the client's business name and click <kbd>+ Create new bot</kbd>. This never replaces your other bots. The app opens the new bot's <b>Config</b> tab.</li>
+<li id="hx-a3"><b>Config.</b> Fill in Brand / business name, Hero headline, Tagline, and <b>Business description</b> (the AI reads this, so include hours, location, delivery and policies). Choose a color theme and <b>Taglish</b> or English. Type the AI employee's name. In <b>Business logo link</b>, paste an image link that starts with <code>https://</code> (for example from Cloudinary) so customers see it is the business's own assistant. Add the shop or website link. Click <kbd>Save all config</kbd>.</li>
+<li id="hx-a4"><b>Gemini key for this bot.</b> Choose one: leave it blank to use your shared key (Settings), or click <kbd>Make a private key link for the client</kbd> and send that link to the client. They open it and paste their own Google AI key. You never see their key and they never see your admin. The link works once and expires in 14 days.</li>
+<li id="hx-a5"><b>Products.</b> Click <kbd>+ Add new product</kbd> for each product or service with its price, and one feature per line. Click <kbd>Save products</kbd>. The AI only quotes prices written here.</li>
+<li id="hx-a6"><b>Payment and Social links.</b> Add GCash, Maya, PayPal or other instructions, then <kbd>Save payment</kbd>. Add Messenger, FB page, Instagram, TikTok and email, then <kbd>Save social links</kbd>.</li>
+<li id="hx-a7"><b>Bot settings.</b> Choose the personality, paste the FAQs (question and answer), and add instructions such as "Always ask for the delivery address". Click <kbd>Save bot settings</kbd>.</li>
+<li id="hx-a8"><b>Test it.</b> In <b>My Bots</b>, click <kbd>Open chat</kbd> on the client's bot and ask the 10 common questions. If an answer is wrong, fix the Business description, Products or FAQs, save, and ask again.</li>
+<li id="hx-a9"><b>Give the client access (do every part).</b> In <b>My Bots</b>, click <kbd>Share with client</kbd> on the client's bot.<br>a) Open your Supabase project, then <b>Authentication → Users → Add user → Create new user</b>. Type the client's email and a password, <b>tick Auto Confirm User</b>, then click <kbd>Create user</kbd>.<br>b) Back in Pahina AI, type the <b>same email</b> and click <kbd>Add client</kbd>.<br>c) Click <kbd>Copy admin link</kbd> (the client's dashboard) and <kbd>Copy chat link</kbd> (for customers). Keep both for Part 6. The client can only see and edit this one bot.</li>
+</ol>
+
+<h3 id="hx-p5">Part 5 · Optional: put the tools on the client's website</h3>
+<p>Only if you also made a website for the client in Pahina Builder:</p>
+<table>
+<tr><th>Tool</th><th>Copy this link</th><th>Paste it in Pahina Builder</th></tr>
+<tr><td><b>Pahina Book</b></td><td>Booking link</td><td>Booking tab → <b>Simple Button → Direct Link</b></td></tr>
+<tr><td><b>Orders + Stock</b></td><td>Order link</td><td>Payment tab → Order box → <b>Pahina Orders + Stock order link</b></td></tr>
+<tr><td><b>Pahina AI</b></td><td>Chat link</td><td>Payment tab → Chat on your page → <b>My own chatbot or chat link</b></td></tr>
+</table>
+<p>Generate again. The "Book now" and "Order now" buttons and the chat bubble now open the live tools. Without a website, the links work on their own: put them in the FB page buttons, bio, Messenger auto-reply and a printed QR.</p>
+
+<h3 id="hx-p6">Part 6 · Handover: the two links per tool</h3>
+<table>
+<tr><th>Tool</th><th>Link 1 · for customers</th><th>Link 2 · for the owner only</th></tr>
+<tr><td><b>Pahina Book</b></td><td>Booking link</td><td>Client login link + email + password (all inside <kbd>Copy message</kbd>)</td></tr>
+<tr><td><b>Orders + Stock</b></td><td>Order link (and the QR to print)</td><td>Client login link + email + password + the PINs</td></tr>
+<tr><td><b>Pahina AI</b></td><td>Chat link</td><td>Admin link + email + password</td></tr>
+</table>
+<p>Ready-made handover message (fill in the brackets, then send by email or Messenger):</p>
+<div class="pb-tpl"><pre>Hi [Owner name], your tools for [Business name] are ready!
+
+FOR YOUR CUSTOMERS (post these on your FB page, bio and Messenger):
+Booking link: [Link 1 from Pahina Book]
+Order link: [Link 1 from Orders + Stock]
+AI assistant: [Chat link from Pahina AI]
+
+FOR YOU ONLY (keep private):
+Bookings dashboard: [Client login link from Pahina Book]
+Orders and stock dashboard: [Client login link from Orders + Stock]
+AI dashboard: [Admin link from Pahina AI]
+Email: [client email]
+Password: [password]
+Cashier PINs: [PINs]
+
+Tip: open each dashboard link on your phone and add it to your home screen.
+New bookings and orders appear there right away. Message me anytime if you need help.</pre><button type="button" class="pb-copy">Copy</button></div>
+<p><b>On the handover call (15 minutes), let the owner do it on their own phone:</b></p>
+<ol class="steps">
+<li id="hx-h1">Open each Link 2, log in, and add it to the home screen.</li>
+<li id="hx-h2">Show where new bookings and orders appear, and how to confirm one and check the payment proof.</li>
+<li id="hx-h3">Show how to change a price or photo (Book: Services &amp; Staff · Orders: Products · AI: Products, then Save).</li>
+<li id="hx-h4">Show how to receive stock and open and close the cashier drawer (Orders + Stock).</li>
+<li id="hx-h5">Delete all your test bookings and orders, then send the handover message.</li>
+</ol>
+
+<h3 id="hx-fix">Troubleshooting: if a step does not work</h3>
+<table>
+<tr><th>If you see</th><th>Do this</th></tr>
+<tr><td>"email rate limit exceeded" or "Supabase paused sign-up emails"</td><td>Confirm email is still ON. Do Part 1 Step 4 again and click <kbd>Save</kbd>, then try again. No need to wait an hour.</td></tr>
+<tr><td>"still waiting for a confirmation email"</td><td>Click <kbd>Copy the fix</kbd>, open the SQL Editor, paste in a new query, click <kbd>Run</kbd>, then click Create my account again.</td></tr>
+<tr><td>"Different password"</td><td>That email already has an account. Type the password you used before.</td></tr>
+<tr><td>"Could not reach that Project URL"</td><td>Check for typos and extra spaces. Wait 1 minute if the project was just created.</td></tr>
+<tr><td>"That is the SECRET key"</td><td>Copy the <b>Publishable</b> key (or anon public), not the secret one.</td></tr>
+<tr><td>Red error in the SQL Editor, or "Not installed yet"</td><td>Copy the engine again, open a <b>new</b> empty query, paste everything, Run, and wait for "Pahina Suite is ready".</td></tr>
+<tr><td>"Verify JWT is still ON"</td><td>Edge Functions → chat → Details tab → turn Verify JWT OFF → Save → Check.</td></tr>
+<tr><td>Gemini: "key is not valid"</td><td>Copy the whole key again, with no spaces. Still failing? Create a new key.</td></tr>
+<tr><td>Gemini: "API is turned off" or "location is not supported"</td><td>In Google AI Studio, click Create API key → <b>Create API key in new project</b>, and paste the new key.</td></tr>
+<tr><td>Gemini: "free limit for today is used up"</td><td>It resets every day around 3 to 4 PM Philippine time. The key is already saved.</td></tr>
+<tr><td>Tools suddenly stop working after a quiet week</td><td>The free project was paused. Open Supabase, click <kbd>Resume project</kbd>, then set up the daily wake-up (Part 1 Step 9).</td></tr>
+<tr><td>Pahina Book: "This key is not for Pahina Book"</td><td>Use a key that starts with <code>FC-book</code> or <code>FC-suite</code>.</td></tr>
+<tr><td>Book or Orders: "Client logins need the latest engine"</td><td>Settings → Engine update. Run the new engine once, then make the login again.</td></tr>
+<tr><td>Client can't log in to the Pahina AI admin link</td><td>In Supabase → Authentication → Users, the user must exist and must not say "Waiting for verification". If it does, delete it and add it again with <b>Auto Confirm User</b> ticked. Also check the same email is listed under Share with client.</td></tr>
+<tr><td>Booking page shows no available times</td><td>Check Schedule (open days and hours) and each staff's working days in Services &amp; Staff.</td></tr>
+<tr><td>A product is missing or "not enough stock" on the order page</td><td>Check the product's stock in the right branch on the Stock page.</td></tr>
+<tr><td>"This link is incomplete"</td><td>The link was cut when it was copied. Copy it again with the <kbd>Copy link</kbd> button, not by selecting the text.</td></tr>
+<tr><td>Anything else</td><td>In Pahina Connect, click <b>Message Levi</b> on the step. Your step and the error are copied for you, so just paste and send.</td></tr>
+</table>
+</section>
+
+
+
 <!-- ===================================================== PART 5 -->
 <div class="part">Part 5 · Grow</div>
 
@@ -1839,7 +2009,13 @@ My job is to make the page as clear and convincing as possible and make sure eve
   let tmr; q.addEventListener('input', () => { clearTimeout(tmr); tmr = setTimeout(run, 180); });
   function run() {
     clearMarks(); const term = q.value.trim().toLowerCase(); let shown = 0;
-    secs.forEach(s => { const hit = !term || s.textContent.toLowerCase().includes(term); s.classList.toggle('dim', !hit); if (hit) shown++; if (hit && term.length > 1) markIn(s, term); });
+    const STOP = new Set('how to use the a an and or of for in on at is are do does can i my me you your we our it this that with what where when which who why paano ang ng sa mga na ba ko po yung ung nga si kung saan ano para gamitin gawin please'.split(' '));
+    let words = term.split(/[^a-z0-9+.-]+/).filter(w => w.length > 1 && !STOP.has(w));
+    if (!words.length && term) words = [term];
+    const has = (t, w) => t.includes(w) || (w.length > 4 && w.endsWith('s') && t.includes(w.slice(0, -1))) || (w.length > 5 && w[0] === 'i' && t.includes(w.slice(1))) || (w.length > 6 && w.startsWith('mag') && t.includes(w.slice(3)));
+    let hits = secs.map(s => { const t = s.textContent.toLowerCase(); return !term || words.every(w => has(t, w)); });
+    if (term && !hits.some(Boolean)) hits = secs.map(s => { const t = s.textContent.toLowerCase(); return words.filter(w => has(t, w)).length >= Math.max(1, Math.ceil(words.length / 2)); });
+    secs.forEach((s, n) => { const hit = hits[n]; s.classList.toggle('dim', !hit); if (hit) shown++; if (hit && term.length > 1) words.forEach(w => markIn(s, w)); });
     links.forEach(a => a.classList.toggle('hide', !!term && $('#' + a.dataset.id).classList.contains('dim')));
     parts.forEach(p => p.style.display = term ? 'none' : ''); hero.style.display = term ? 'none' : '';
     $('#empty').style.display = shown ? 'none' : 'block';
@@ -1887,6 +2063,33 @@ My job is to make the page as clear and convincing as possible and make sure eve
     last={pk:NAMES[pk],ex:ex,t:f(t),d:f(t/2),c:f(CARE[q.cur][q.tier]),r:q.rush}}
   seg('qCur','cur',false);seg('qTier','tier',true);seg('qRush','rush',true);$('#qPkg').onchange=calc;draw();calc();
   $('#qCopy').onclick=function(){var m='Hi [Name]! Here is my quote for your project:\n\nPackage: '+last.pk+(last.ex.length?'\nAdd-ons: '+last.ex.join(', '):'')+(last.r?'\nRush delivery: +'+(last.r*100)+'%':'')+'\n\nTotal: '+last.t+'\nTo start: '+last.d+' (50% deposit)\nBefore launch: '+last.d+'\n\nOptional monthly care after launch: '+last.c+'/month\n\nOnce the deposit is in, I will send you a short onboarding link so I can start right away.';copyText(m,this,'Copy quote message')};
+})();
+</script>
+
+<script>
+(function(){
+  var box=document.getElementById('hxTrack'); if(!box) return;
+  var K='pahina-hx-v1', st={}; try{st=JSON.parse(localStorage.getItem(K)||'{}')}catch(e){}
+  var groups=[], cur=null;
+  [['hx-prep','Before you start',['Prepared everything on the list and asked the client for their details']],['hx-p1','Part 1 · Pahina Connect (once)',null],['hx-p2','Part 2 · Pahina Book',null],['hx-p3','Part 3 · Orders + Stock',null],['hx-p4','Part 4 · Pahina AI',null],['hx-p6','Part 6 · Handover',null]].forEach(function(g){
+    var items=[];
+    if(g[2]){items.push({id:'hx-prep-1',t:g[2][0],a:g[0]})}
+    else{var pre={'hx-p1':'hx-c','hx-p2':'hx-b','hx-p3':'hx-o','hx-p4':'hx-a','hx-p6':'hx-h'}[g[0]];
+      document.querySelectorAll('[id^="'+pre+'"]').forEach(function(li){var b=li.querySelector('b');var t=(b?b.textContent:li.textContent).replace(/\.$/,'');if(!b)t=li.textContent.slice(0,90);items.push({id:li.id,t:t,a:li.id})})}
+    groups.push({id:g[0],name:g[1],items:items});
+  });
+  var list=document.getElementById('hxList');
+  function save(){try{localStorage.setItem(K,JSON.stringify(st))}catch(e){}}
+  function draw(){
+    var html='',all=0,done=0,next=null;
+    groups.forEach(function(g){html+='<div class="hx-grp">'+g.name+'</div>';g.items.forEach(function(it){all++;var d=!!st[it.id];if(d)done++;else if(!next)next={it:it,g:g};html+='<label class="hx-item'+(d?' done':'')+'"><input type="checkbox" data-id="'+it.id+'"'+(d?' checked':'')+'><span>'+it.t+'</span></label>'})});
+    list.innerHTML=html;
+    document.getElementById('hxCount').textContent=done+' of '+all+' done';
+    document.getElementById('hxNext').innerHTML=next?('<b>'+next.g.name+':</b> <a href="#'+next.it.a+'">'+next.it.t+'</a>. When it works, tick it below.'):'All done. Your client has their links. To start the next client, click the button below.';
+    list.querySelectorAll('input').forEach(function(c){c.onchange=function(){st[c.dataset.id]=c.checked;save();draw()}});
+  }
+  document.getElementById('hxReset').onclick=function(){Object.keys(st).forEach(function(k){if(!/^hx-c|^hx-prep/.test(k))delete st[k]});save();draw()};
+  draw();
 })();
 </script>
 </body>
